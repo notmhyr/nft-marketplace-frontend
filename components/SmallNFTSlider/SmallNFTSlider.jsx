@@ -8,7 +8,7 @@ import { BsArrowUpRight } from "react-icons/bs";
 //internal imports
 import style from "./SmallNFTSlider.module.scss";
 import images from "../../img";
-import { Button, NFTCard, Title } from "../componentIndex";
+import { Button, LoadingComponent, NFTCard, Title } from "../componentIndex";
 import axios from "axios";
 import { useRouter } from "next/router";
 const SmallNFTSlider = () => {
@@ -64,38 +64,43 @@ const SmallNFTSlider = () => {
           paragraph="Buy NFT and enjoy your life"
         />
       </div>
-      <Swiper
-        modules={[Navigation]}
-        navigation={true}
-        grabCursor
-        breakpoints={{
-          300: {
-            slidesPerView: 1,
-            spaceBetween: 2,
-          },
-          600: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
 
-          890: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1100: {
-            slidesPerView: 4,
-            spaceBetween: 22,
-          },
-        }}
-        speed={850}
-        className={`${style.smallNftSlider_swiper} smallNftSlider_swiper`}
-      >
-        {NFTs.map((nft, i) => (
-          <SwiperSlide key={i + 1}>
-            <NFTCard nft={nft} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {isLoadingNFTs ? (
+        <LoadingComponent message="loading Nfts..." />
+      ) : (
+        <Swiper
+          modules={[Navigation]}
+          navigation={true}
+          grabCursor
+          breakpoints={{
+            300: {
+              slidesPerView: 1,
+              spaceBetween: 2,
+            },
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 10,
+            },
+
+            890: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+            1100: {
+              slidesPerView: 4,
+              spaceBetween: 22,
+            },
+          }}
+          speed={850}
+          className={`${style.smallNftSlider_swiper} smallNftSlider_swiper`}
+        >
+          {NFTs.map((nft, i) => (
+            <SwiperSlide key={i + 1}>
+              <NFTCard nft={nft} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
 
       <Button
         btnName="See more"

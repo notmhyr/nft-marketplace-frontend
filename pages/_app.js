@@ -5,6 +5,7 @@ import { WagmiConfig, useNetwork, useSwitchNetwork } from "wagmi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useRouter } from "next/router";
+import { Poppins } from "next/font/google";
 
 //INTERNAL IMPORTS
 import "../styles/globals.scss";
@@ -16,6 +17,11 @@ import ValidateNetworkProvider from "../context/ValidateNetwork";
 
 // configuration for connect wallets and interacting with blockchain
 const { wagmiClient, ethereumClient } = blockchainConfig();
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 // App component
 function MyApp({ Component, pageProps }) {
@@ -51,7 +57,7 @@ function MyApp({ Component, pageProps }) {
   }, [router]);
 
   return (
-    <div className={style.app}>
+    <div className={`${style.app} ${poppins.className}`}>
       <ToastContainer
         position="top-right"
         autoClose={5000}

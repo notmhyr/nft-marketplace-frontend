@@ -53,7 +53,7 @@ const NFTs = () => {
 
   return (
     <div className={style.nft}>
-      {/* <WebsiteHead title="All NFTs" /> */}
+      <WebsiteHead title="All NFTs" />
 
       <h2>All available NFTs</h2>
       <Filter />

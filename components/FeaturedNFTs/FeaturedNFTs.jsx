@@ -1,11 +1,11 @@
 import React from "react";
 // internal imports
 import style from "./FeaturedNFTs.module.scss";
-import { Title, Filter } from "../componentIndex";
+import { Title, Filter, LoadingComponent } from "../componentIndex";
 import images from "../../img";
 import AuctionCard from "../AuctionCard/AuctionCard";
 
-const FeaturedNFTs = ({ NFTs }) => {
+const FeaturedNFTs = ({ NFTs, loading }) => {
   return (
     <div className={style.featuredNfts}>
       <div className={style.featuredNfts_box}>
@@ -16,11 +16,15 @@ const FeaturedNFTs = ({ NFTs }) => {
           />
         </div>
         <Filter />
-        <div className={style.featuredNfts_nfts}>
-          {NFTs.map((el, i) => (
-            <AuctionCard nft={el} key={i + 1} />
-          ))}
-        </div>
+        {loading ? (
+          <LoadingComponent message="loading Nfts" />
+        ) : (
+          <div className={style.featuredNfts_nfts}>
+            {NFTs.map((el, i) => (
+              <AuctionCard nft={el} key={i + 1} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

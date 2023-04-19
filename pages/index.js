@@ -64,10 +64,10 @@ const index = () => {
 
       <HeroSection />
       <Service />
-      <AuctionSlider NFTs={NFTs?.slice(0, 5)} />
+      <AuctionSlider NFTs={NFTs?.slice(0, 5)} loading={isLoadingNFTs} />
       <FollowerTab />
       <TopCollection />
-      <FeaturedNFTs NFTs={NFTs?.slice(5, 14)} />
+      <FeaturedNFTs NFTs={NFTs?.slice(5, 14)} loading={isLoadingNFTs} />
       <Subscribe />
       <SmallNFTSlider />
     </div>

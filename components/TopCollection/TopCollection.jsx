@@ -8,13 +8,14 @@ import {
 import style from "./TopCollection.module.scss";
 import images from "../../img";
 import TopCollectionCard from "./TopCollectionCard/TopCollectionCard";
-import { Button } from "../componentIndex";
+import { Button, LoadingComponent } from "../componentIndex";
 import axios from "axios";
 const TopCollection = () => {
   const [Collections, setCollections] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   // fetch all collections form api
   const fetchCollections = async () => {
+    setLoading(true);
     try {
       const { data } = await axios.get(`/api/collections/getCollections`);
       const filteredCollection = data.data.collections.filter(
@@ -48,7 +49,9 @@ const TopCollection = () => {
         })
       );
       setCollections(collections);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.log(error);
     }
   };
@@ -81,12 +84,15 @@ const TopCollection = () => {
           icon={<BsFillCalendarDateFill fontSize={12} />}
         />
       </div>
-
-      <div className={style.topCollection_collections}>
-        {Collections.map((el, i) => (
-          <TopCollectionCard collection={el} key={i + 1} />
-        ))}
-      </div>
+      {loading ? (
+        <LoadingComponent message="loading collections..." />
+      ) : (
+        <div className={style.topCollection_collections}>
+          {Collections.map((el, i) => (
+            <TopCollectionCard collection={el} key={i + 1} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
