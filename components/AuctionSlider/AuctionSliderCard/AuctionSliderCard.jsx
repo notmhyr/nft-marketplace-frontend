@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaEthereum } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
-import style from "./NFTSliderCard.module.scss";
+import style from "./AuctionSliderCard.module.scss";
 import Button from "../../Button/Button";
 import images from "../../../img";
 import { cutAddress } from "../../../utils/cutAddress";
@@ -10,7 +10,7 @@ import Identicon from "react-identicons";
 import { countDownTimer } from "../../../utils/date";
 import { useRouter } from "next/router";
 
-const NFTSliderCard = ({ nft }) => {
+const AuctionSliderCard = ({ nft }) => {
   //count down data
   const [countDown, setCountDown] = useState("");
 
@@ -117,4 +117,4 @@ const NFTSliderCard = ({ nft }) => {
   );
 };
 
-export default NFTSliderCard;
+export default AuctionSliderCard;

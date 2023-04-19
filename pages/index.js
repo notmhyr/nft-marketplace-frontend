@@ -4,18 +4,15 @@ import style from "../styles/home.module.scss";
 import {
   TopCollection,
   FollowerTab,
-  BigNFTSlider,
   Service,
   HeroSection,
-  Title,
-  Filter,
   FeaturedNFTs,
   Subscribe,
   SmallNFTSlider,
   WebsiteHead,
+  AuctionSlider,
 } from "../components/componentIndex";
 import axios from "axios";
-import Head from "next/head";
 
 const index = () => {
   const [NFTs, setNFTs] = useState([]);
@@ -67,7 +64,7 @@ const index = () => {
 
       <HeroSection />
       <Service />
-      <BigNFTSlider NFTs={NFTs?.slice(0, 5)} />
+      <AuctionSlider NFTs={NFTs?.slice(0, 5)} />
       <FollowerTab />
       <TopCollection />
       <FeaturedNFTs NFTs={NFTs?.slice(5, 14)} />

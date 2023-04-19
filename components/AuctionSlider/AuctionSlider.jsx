@@ -4,10 +4,10 @@ import "swiper/css";
 import { Autoplay, Navigation } from "swiper";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import style from "./BigNFTSlider.module.scss";
-import NFTSliderCard from "./NFTSliderCard/NFTSliderCard";
+import style from "./AuctionSlider.module.scss";
+import AuctionSliderCard from "./AuctionSliderCard/AuctionSliderCard";
 
-const BggNFTSlider = ({ NFTs }) => {
+const AuctionSlider = ({ NFTs }) => {
   return (
     <div className={style.slider}>
       <div className={style.slider_box}>
@@ -25,7 +25,7 @@ const BggNFTSlider = ({ NFTs }) => {
         >
           {NFTs.map((item, i) => (
             <SwiperSlide key={i + 1}>
-              <NFTSliderCard nft={item} />
+              <AuctionSliderCard nft={item} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -34,4 +34,4 @@ const BggNFTSlider = ({ NFTs }) => {
   );
 };
 
-export default BggNFTSlider;
+export default AuctionSlider;

@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar";
 import Logo from "./Logo/Logo";
 import HeroSection from "./HeroSection/HeroSection";
 import Service from "./Service/Service";
-import BigNFTSlider from "./BigNFTslider/BigNFTSlider";
+import AuctionSlider from "./AuctionSlider/AuctionSlider";
 import Title from "./Title/Title";
 import FollowerTab from "./FollowerTab/FollowerTab";
 import TopCollection from "./TopCollection/TopCollection";
@@ -24,7 +24,7 @@ export {
   Navbar,
   HeroSection,
   Service,
-  BigNFTSlider,
+  AuctionSlider,
   FollowerTab,
   TopCollection,
   Title,
