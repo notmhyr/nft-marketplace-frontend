@@ -6,9 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 import style from "./BigNFTSlider.module.scss";
 import NFTSliderCard from "./NFTSliderCard/NFTSliderCard";
-import images from "../../img";
-import axios from "axios";
-const NFTSlider = ({ NFTs }) => {
+
+const BggNFTSlider = ({ NFTs }) => {
   return (
     <div className={style.slider}>
       <div className={style.slider_box}>
@@ -35,4 +34,4 @@ const NFTSlider = ({ NFTs }) => {
   );
 };
 
-export default NFTSlider;
+export default BggNFTSlider;
