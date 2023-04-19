@@ -1,0 +1,106 @@
+@import "colors";
+.createNFT {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  &_title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    strong {
+      font-size: 1rem;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+  &_dropzone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border: 3px dashed $border-gray;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    min-height: 200px;
+    cursor: pointer;
+
+    .createNFT_dropzone_icon {
+      margin-bottom: 1rem;
+    }
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &_image {
+    align-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1rem;
+    // border: 3px dashed $border-gray;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    img {
+      border-radius: 5px;
+    }
+    .createNFT_image_icon {
+      position: absolute;
+      top: 9px;
+      right: 16px;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.message {
+  padding: 1rem;
+  min-height: 60vh;
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    max-width: 450px;
+    margin: 2rem auto;
+    margin-top: 4rem;
+  }
+
+  a {
+    color: $link-color;
+    white-space: nowrap;
+  }
+  span {
+    color: $link-color;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 425px) {
+  .message {
+    min-height: 80vh;
+
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}

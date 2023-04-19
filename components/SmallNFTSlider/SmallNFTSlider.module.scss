@@ -1,0 +1,42 @@
+@import "../../styles/colors";
+
+.smallNftSlider {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  &_title {
+    padding: 0 1rem;
+    align-self: flex-start;
+  }
+  .smallNftSlider_swiper {
+    padding: 1rem;
+    width: 100%;
+    max-width: 1300px;
+    position: relative;
+    .smallNftSlider_swiper_slides {
+      margin: 0 auto;
+      max-width: 1000px;
+      cursor: pointer;
+    }
+  }
+
+  &_swiper {
+    width: 100%;
+    margin-top: 2rem;
+
+    .swiper-wrapper {
+      margin: 0 auto;
+      max-width: 1000px;
+      cursor: pointer;
+    }
+  }
+
+  button {
+    margin-top: 1.5rem;
+  }
+}

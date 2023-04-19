@@ -1,0 +1,125 @@
+@import "../../styles/colors";
+
+.subscribe {
+  margin-top: 8rem;
+  &_box {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem;
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+
+    .subscribe_left {
+      display: flex;
+      flex-direction: column;
+      flex: 1fr;
+      gap: 1.2rem;
+      max-width: 600px;
+
+      &_step {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        span {
+          width: 40px;
+          height: 40px;
+          font-size: 15px;
+          border-radius: 2rem;
+          display: grid;
+          justify-content: center;
+          align-items: center;
+          background-color: $secondary;
+          color: $main;
+        }
+
+        p {
+          margin: 0;
+          font-size: 14.5px;
+          font-weight: bold;
+        }
+      }
+
+      &_inputBox {
+        width: 80%;
+        overflow: hidden;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        background-color: $secondary-bg-color;
+        border-radius: 4rem;
+        margin-top: 1.5rem;
+
+        input {
+          flex: 2fr;
+          border: none;
+          width: 100%;
+          height: 100%;
+          font-size: 1rem;
+          background-color: transparent;
+          outline: none;
+
+          &::placeholder {
+            font-size: 1.1rem;
+          }
+        }
+
+        .subscribe_left_inputBox_icon {
+          flex: 1fr;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .subscribe_right {
+    flex: 1fr;
+
+    img {
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .subscribe {
+    &_box {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+
+      .subscribe_left {
+        max-width: 500px;
+
+        &_inputBox {
+          align-self: center;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 420px) {
+  .subscribe {
+    &_box {
+      .subscribe_left {
+        &_inputBox {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .subscribe {
+    .subscribe_right {
+      img {
+        width: 100%;
+        max-height: 320px;
+      }
+    }
+  }
+}

@@ -1,36 +1,27 @@
 import React, { useEffect, useState } from "react";
-
-import style from "../styles/home.module.scss";
-import {
-  TopCollection,
-  FollowerTab,
-  BigNFTSlider,
-  Service,
-  HeroSection,
-  Title,
-  Filter,
-  FeaturedNFTs,
-  Subscribe,
-  SmallNFTSlider,
-  WebsiteHead,
-} from "../components/componentIndex";
 import axios from "axios";
-import Head from "next/head";
 
-const index = () => {
+//internal imports
+import {
+  Filter,
+  LoadingComponent,
+  NFTCard,
+  WebsiteHead,
+} from "../../components/componentIndex";
+import style from "../../styles/nfts.module.scss";
+const NFTs = () => {
   const [NFTs, setNFTs] = useState([]);
   const [isLoadingNFTs, setIsLoadingNFTs] = useState(false);
 
+  // fetch user's listed nfts form api
   const fetchListedNFTs = async () => {
     setIsLoadingNFTs(true);
 
     try {
-      const { data } = await axios.get(`/api/listNFT/getAuctions`);
+      const { data } = await axios.get(`/api/listNFT/getListedNFTs`);
       if (data.status == "success" && data.data.nfts.length > 0) {
-        // slice nft to only 20 nfts
-        const filteredNFT = data.data.nfts.slice(0, 20);
         const nfts = await Promise.all(
-          filteredNFT.map(async (el) => {
+          data.data.nfts.map(async (el) => {
             const nft = await fetchTokenURIData(el.tokenURI);
 
             return { ...el, ...nft };
@@ -61,20 +52,26 @@ const index = () => {
   }, []);
 
   return (
-    <div className={style.home}>
-      <WebsiteHead title="Home" />
-      <div className={style.grayCircle}></div>
+    <div className={style.nft}>
+      {/* <WebsiteHead title="All NFTs" /> */}
 
-      <HeroSection />
-      <Service />
-      <BigNFTSlider NFTs={NFTs?.slice(0, 5)} />
-      <FollowerTab />
-      <TopCollection />
-      <FeaturedNFTs NFTs={NFTs?.slice(5, 14)} />
-      <Subscribe />
-      <SmallNFTSlider />
+      <h2>All available NFTs</h2>
+      <Filter />
+      {isLoadingNFTs ? (
+        <LoadingComponent message="loading all Nfts" />
+      ) : NFTs?.length === 0 ? (
+        <div className={style.message}>
+          <p>No available NFTs</p>
+        </div>
+      ) : (
+        <div className={style.nft_box}>
+          {NFTs?.map((el, i) => (
+            <NFTCard nft={el} key={i} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };
 
-export default index;
+export default NFTs;

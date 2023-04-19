@@ -1,0 +1,56 @@
+@import "../../styles/colors";
+
+.auctionModel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  z-index: 200;
+  transition: all 0.1s ease-in;
+
+  &_box {
+    position: relative;
+    background-color: $main;
+    border-radius: 12px;
+    // max-width: 360px;
+    width: 40%;
+    height: max-content;
+    padding: 1rem;
+    box-shadow: 0 0 20px lightgray;
+  }
+
+  .auctionModel_box_status {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 14px;
+  }
+
+  .auctionModel_box_closeBtn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .auctionModel_box_form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .auctionModel {
+    &_box {
+      width: 90%;
+    }
+  }
+}

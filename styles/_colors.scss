@@ -1,0 +1,13 @@
+$main: #ffffffff;
+$secondary: #272727ff;
+$footer: #252433ff;
+$secondary-bg-color: #f4f5f6ff;
+$border-gray: #656565ff;
+$text-color: #2f2f2fff;
+$link-color: #0084ff;
+$blur-color: rgba(85, 85, 85, 0.3);
+
+:export {
+  main: $main;
+  secondary: $secondary;
+}

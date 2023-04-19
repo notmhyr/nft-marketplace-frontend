@@ -1,0 +1,87 @@
+@import "colors";
+.Form {
+  &_box_input {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    label {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+
+      a {
+        font-size: 15px;
+        color: $link-color;
+      }
+    }
+
+    span {
+      font-size: 13px;
+    }
+
+    .Form_box_input_input {
+      width: 100%;
+      border: 1px solid $border-gray;
+      padding: 0.8rem;
+      font-size: 14px;
+      border-radius: 1rem;
+      background-color: transparent;
+      margin-top: 0.5rem;
+      outline: none;
+    }
+
+    .Form_box_input_box {
+      width: 100%;
+      border: 1px solid $border-gray;
+      border-radius: 1rem;
+      align-items: center;
+      display: flex;
+      gap: 1rem;
+      overflow: hidden;
+
+      &_icon {
+        font-size: 1.7rem;
+        background-color: $secondary;
+        padding: 0.5rem 1rem;
+        color: $main;
+        display: grid;
+        cursor: pointer;
+      }
+
+      input {
+        width: 90%;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        font-size: 14px;
+      }
+    }
+
+    select {
+      width: 100%;
+      border: 1px solid $border-gray;
+      padding: 0.8rem;
+      font-size: 14px;
+      border-radius: 1rem;
+      background-color: transparent;
+      margin-top: 0.5rem;
+      outline: none;
+    }
+    textarea {
+      width: 100%;
+      background-color: transparent;
+      outline: none;
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+  }
+}
+.Form_box_button {
+  align-self: center;
+  margin-top: 2rem;
+
+  button {
+    font-size: 17px;
+    padding: 0.6rem 1.9rem;
+  }
+}

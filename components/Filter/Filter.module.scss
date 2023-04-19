@@ -1,0 +1,100 @@
+@import "../../styles/colors";
+
+.filter {
+  &_box {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  &_top {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 1.5rem;
+    margin-top: 2.6rem;
+    .filter_top_left {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      button {
+        border: 1px solid transparent;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s ease-in;
+        background-color: transparent;
+        border-radius: 23px;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid $border-gray;
+        }
+      }
+    }
+
+    .filter_top_right {
+      button {
+        background-color: transparent;
+        border: 1px solid $border-gray;
+        border-radius: 25px;
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.2rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &_bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.6rem;
+    border-top: 1.4px solid $border-gray;
+    padding-top: 2rem;
+    button {
+      font-size: 14.5px;
+      padding: 0.5rem 1rem;
+      background-color: transparent;
+      border: 1px solid $border-gray;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .active {
+      background-color: $secondary;
+      border: 1px solid $secondary;
+      color: $main;
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .filter {
+    &_top {
+      flex-direction: column;
+      gap: 2rem;
+      .filter_top_right {
+        justify-content: center;
+        align-items: center;
+        button {
+          max-width: 400px;
+          min-width: 300px;
+          justify-content: center;
+        }
+      }
+
+      .filter_top_left {
+        justify-content: center;
+      }
+    }
+
+    &_bottom {
+      justify-content: center;
+    }
+  }
+}

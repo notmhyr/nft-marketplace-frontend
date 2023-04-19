@@ -1,0 +1,212 @@
+@import "../../../styles/colors";
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.2rem;
+  max-width: 720px;
+  height: fit-content;
+  margin: 0 auto;
+  width: 100%;
+  cursor: grab;
+
+  &_left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    flex: 2fr;
+    h2 {
+      text-transform: capitalize;
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .card_left_creator {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      &_icon {
+        border-radius: 50%;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+
+    p {
+      font-size: 14.5px;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .card_left_auction {
+      display: flex;
+      gap: 1.4rem;
+      margin-bottom: 1rem;
+      &_left {
+        display: flex;
+        flex-direction: column;
+        border-right: 3px solid $border-gray;
+        padding-right: 1.5rem;
+        span {
+          font-size: 13px;
+          margin-bottom: 0.8rem;
+        }
+
+        strong {
+          font-size: 1.4rem;
+        }
+      }
+
+      &_right {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0.5rem;
+
+        span {
+          font-size: 13px;
+          margin-bottom: 0.8rem;
+        }
+        .card_left_auction_right_endTime {
+          display: flex;
+          gap: 0.5rem;
+
+          &_box {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+            align-items: center;
+
+            span:first-child {
+              font-size: 1.4rem;
+              font-weight: 600;
+              margin: 0;
+            }
+            span:last-child {
+              margin: 0;
+              font-size: 13px;
+            }
+          }
+
+          &_colon {
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+
+          // span {
+          //   font-size: 1.4rem;
+          //   font-weight: bold;
+          //   margin: 0;
+          // }
+        }
+
+        .card_left_auction_right_time {
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          span {
+            margin: 0;
+            font-size: 13px;
+          }
+        }
+      }
+    }
+
+    .card_left_buttons {
+      display: flex;
+      gap: 1.5rem;
+
+      button {
+        font-size: 14.5px;
+      }
+
+      .card_left_buttons_second {
+        background-color: transparent;
+        color: $secondary;
+      }
+    }
+  }
+
+  &_right {
+    flex: 1fr;
+    align-self: center;
+    img {
+      border-radius: 17px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .card {
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem;
+    max-width: 600px;
+    &_left {
+      flex: 1fr;
+      max-width: 450px;
+
+      p {
+        align-self: left;
+      }
+    }
+
+    &_right {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    padding: 0.6rem;
+    &_left {
+      // min-width: 400px;
+      align-items: center;
+      h2 {
+        font-size: 1.4rem;
+      }
+      .card_left_auction {
+        gap: 1rem;
+        flex-direction: column;
+        &_left {
+          padding-right: 1.3rem;
+          min-width: 80px;
+          white-space: nowrap;
+          overflow: hidden;
+          border: none;
+          // align-items: center;
+          strong {
+            font-size: 1.2rem;
+          }
+        }
+
+        &_right {
+          .card_left_auction_right_endTime {
+            &_box {
+              span:first-child {
+                font-size: 1.2rem;
+              }
+              span:last-child {
+                font-size: 12px;
+              }
+            }
+          }
+
+          .card_left_auction_right_time {
+            span {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

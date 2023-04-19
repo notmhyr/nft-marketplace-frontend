@@ -1,0 +1,72 @@
+@import "../../../styles/colors";
+
+.topCollectionCard {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  transition: all 0.3s ease-in;
+  max-width: 400px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 10px 0 1rem lightgray, -8px 0 1rem lightgray;
+  }
+  &_images {
+    border-radius: 18px;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+
+    .topCollectionCard_images_smallImg {
+      display: flex;
+      gap: 9px;
+      justify-content: space-between;
+
+      img {
+        max-width: 140px;
+        max-height: 90px;
+      }
+    }
+  }
+
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    .topCollectionCard_info_name {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      h3 {
+        font-size: 1.4rem;
+        margin: 0;
+        white-space: nowrap;
+      }
+
+      &_creator {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+
+        img {
+          border-radius: 50%;
+        }
+
+        span,
+        strong {
+          font-size: 14px;
+        }
+      }
+    }
+    .topCollectionCard_info_value {
+      font-size: 14px;
+      border: 2px solid $border-gray;
+      border-radius: 4px;
+      padding: 0.3rem;
+      align-self: flex-end;
+      margin-bottom: 0.5rem;
+    }
+  }
+}

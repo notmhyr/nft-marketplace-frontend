@@ -1,0 +1,67 @@
+.contactus {
+  padding: 1rem;
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  &_box {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 900px;
+    margin: 0 auto;
+    .contactus_box_left {
+      flex: 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      max-width: 300px;
+      align-self: center;
+
+      h3 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 14px;
+        margin: 0;
+        max-width: 240px;
+      }
+
+      a {
+        font-size: 18px;
+        margin-right: 0.6rem;
+      }
+    }
+
+    .contactus_box_right {
+      width: 100%;
+      flex: 2fr;
+      max-width: 520px;
+    }
+
+    textarea {
+      margin-bottom: 2rem;
+    }
+
+    button {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contactus {
+    &_box {
+      flex-direction: column-reverse;
+
+      .contactus_box_left {
+        // align-self: flex-start;
+        p {
+          width: 100%;
+          font-size: 15px;
+          max-width: none;
+        }
+      }
+    }
+  }
+}

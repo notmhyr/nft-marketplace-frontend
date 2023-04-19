@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "colors";
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: $main;
+  color: $text-color;
+}
+
+body {
+  position: relative;
+  z-index: -1;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.w3m-medium {
+  width: 40px !important;
+  height: 40px !important;
+}
+
+//style for swiper arrows
+.swiper-button-next::after {
+  color: $secondary;
+}
+.swiper-button-prev::after {
+  color: $secondary;
+}
+
+@media (max-width: 860px) {
+  .bigSlider_swiper {
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 20% !important;
+      transform: translateY(-20%);
+    }
+  }
+}
+
+.smallNftSlider_swiper {
+  position: relative;
+  .swiper-button-next::after {
+    position: absolute;
+    right: -9px;
+    font-size: 2.2rem;
+    // transform: translateX(60%);
+  }
+  .swiper-button-prev::after {
+    position: absolute;
+    left: -9px;
+    font-size: 2.2rem;
+  }
+}
+
+// for preventing zoom in when user click on inputs on mobile
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  textarea,
+  input {
+    font-size: 16px;
+  }
+}

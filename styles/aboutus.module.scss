@@ -1,0 +1,153 @@
+@import "./colors";
+.aboutus {
+  margin-top: 5rem;
+  &_box {
+    max-width: 1300px;
+    padding: 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .aboutus_box_hero {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.6rem;
+
+      &_left {
+        flex: 1fr;
+        align-self: center;
+        width: 100%;
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+
+      &_right {
+        flex: 2fr;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .aboutus_box_title {
+      max-width: 600px;
+      h2 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .aboutus_box_founder {
+      display: flex;
+      justify-content: center;
+
+      &_box {
+        display: flex;
+        flex-direction: column;
+        padding: 0.7rem;
+        padding-bottom: 1.2rem;
+        width: 310px;
+        border-radius: 20px;
+        max-width: 350px;
+        background-color: $secondary;
+        color: $main;
+
+        img {
+          width: 100%;
+          border-radius: 20px;
+        }
+        .aboutus_box_founder_box_info {
+          padding: 0.8rem;
+          h3 {
+            font-size: 1.3rem;
+            margin: 0;
+            margin-bottom: 0.8rem;
+          }
+          p {
+            margin: 0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .aboutus_box_facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.7rem;
+      margin-bottom: 3rem;
+
+      &_box {
+        padding: 2rem;
+        border-radius: 20px;
+        background-color: $secondary;
+        color: $main;
+
+        h3 {
+          font-size: 2.2rem;
+          margin: 0;
+        }
+
+        p {
+          font-size: 14px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutus {
+    margin-top: 1rem;
+    &_box {
+      .aboutus_box_hero {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &_left {
+          h1 {
+            font-size: 2.1rem;
+          }
+          p {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .aboutus_box_title {
+        h2 {
+          font-size: 2.1rem;
+        }
+        p {
+          font-size: 1.1rem;
+        }
+      }
+
+      .aboutus_box_facts {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+
+        &_box {
+          h3 {
+            font-size: 1.7rem;
+            margin: 0;
+          }
+
+          p {
+            font-size: 13px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "colors";
+.app {
+  max-width: 1800px;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.home {
+  // position: relative;
+  overflow-x: hidden;
+  // max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grayCircle {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background-color: $secondary-bg-color;
+  top: -230px;
+  right: -400px;
+  z-index: -1;
+}
+
+@media (max-width: 800px) {
+  .grayCircle {
+    width: 600px;
+    height: 600px;
+    top: -160px;
+    right: -240px;
+  }
+}
+
+@media (max-width: 500px) {
+  .grayCircle {
+    display: none;
+  }
+}

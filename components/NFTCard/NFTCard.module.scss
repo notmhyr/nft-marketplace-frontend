@@ -1,0 +1,104 @@
+@import "../../styles/colors";
+
+// card styles
+.smallNftCard {
+  padding: 0.6rem;
+  border-radius: 15px;
+  max-width: 340px;
+  min-height: 350px;
+  margin: 0 auto;
+}
+.smallNftCard {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px lightgrey;
+
+  img {
+    border-radius: 15px;
+    border-bottom-right-radius: 2px;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  &_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+    .smallNftCard_box_collection {
+      position: absolute;
+      top: -10px;
+      right: -40px;
+      padding: 0.5rem 3rem;
+      padding-left: 2rem;
+      text-align: center;
+      transform: skewX(45deg);
+      border-bottom-left-radius: 1rem;
+      background-color: $main;
+
+      &_info {
+        transform: skewX(-45deg);
+
+        p {
+          font-weight: bold;
+          margin: 0;
+          font-size: 14px;
+        }
+        small {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .smallNftCard_box_info {
+      position: absolute;
+      bottom: 0;
+      left: -33px;
+      transform: skewX(45deg);
+      padding: 0.5rem 3rem;
+      padding-top: 0.8rem;
+      border-top-right-radius: 15px;
+      background-color: $main;
+      z-index: 100;
+      text-align: center;
+      width: 60%;
+      white-space: nowrap;
+      &_info {
+        transform: skewX(-45deg);
+
+        strong {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .smallNftCard_box_buyNow {
+      position: absolute;
+      bottom: 3px;
+      right: -24px;
+      z-index: 100;
+      width: 57%;
+      transform: skewX(45deg);
+      background-color: $secondary;
+      padding: 0.8rem 3rem;
+      padding-right: 4rem;
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 10px;
+      white-space: nowrap;
+      cursor: pointer;
+
+      &_box {
+        transform: skewX(-45deg);
+
+        color: $main;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@import "../../styles/colors";
+
+.auctionCard {
+  padding: 0.8rem;
+  border-radius: 15px;
+  background-color: $main;
+  transition: all 0.3s ease-in;
+  overflow: hidden;
+  max-width: 500px;
+  cursor: pointer;
+  &_box {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+
+    border: none;
+    .auctionCard_remainingTime {
+      position: absolute;
+      top: -10px;
+      right: -20px;
+      padding: 0.5rem 4rem;
+      text-align: center;
+      transform: skewX(45deg);
+      border-bottom-left-radius: 1rem;
+      background-color: $main;
+      width: 270px;
+      // min-width: fit-content;
+
+      &_info {
+        transform: skewX(-45deg);
+
+        p {
+          font-weight: bold;
+          display: flex;
+          gap: 3px;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+    img {
+      width: 100%;
+      border-radius: 20px;
+      transition: all 0.3s ease-in;
+    }
+
+    .auctionCard_info {
+      position: absolute;
+      bottom: 0;
+      left: -33px;
+      transform: skewX(45deg);
+      padding: 0.5rem 4rem;
+      padding-top: 0.8rem;
+      border-top-right-radius: 15px;
+      background-color: $main;
+      text-align: center;
+      min-width: 200px;
+
+      &_info {
+        transform: skewX(-45deg);
+
+        h4 {
+          margin: 0;
+          margin-bottom: 1rem;
+          font-size: 1.1rem;
+        }
+        .auctionCard_info_bid {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          position: relative;
+          border: 1px solid $border-gray;
+          padding: 0.3rem;
+          border-radius: 9px;
+          width: 100px;
+          &_current {
+            position: absolute;
+            top: -18px;
+            background-color: $secondary;
+            color: $main;
+            font-size: 11px;
+            padding: 0.2rem;
+            border-radius: 4px;
+          }
+
+          .auctionCard_info_bid_price {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 10px 0 1rem lightgray, -8px 0 1rem lightgray;
+  }
+}

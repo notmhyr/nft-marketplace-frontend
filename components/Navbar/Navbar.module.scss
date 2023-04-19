@@ -1,0 +1,153 @@
+@import "../../styles/colors";
+
+.navbar {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+  align-items: center;
+
+  &_left {
+    cursor: pointer;
+  }
+
+  &_middle {
+    display: flex;
+    align-items: center;
+
+    .navbar_middle_link {
+      padding: 0.7rem 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-bottom: 1px solid $border-gray;
+      }
+    }
+
+    .navbar_dropdown {
+      position: relative;
+      span {
+        padding: 0.7rem 1.2rem;
+        cursor: pointer;
+      }
+
+      .navbar_dropdown_menu {
+        display: none;
+        position: absolute;
+        background-color: $main;
+        min-width: 200px;
+        z-index: 100;
+        border-radius: 9px;
+        top: 2rem;
+        left: -20px;
+        padding: 0.8rem 0.5rem;
+        overflow: hidden;
+        background-color: $blur-color;
+        backdrop-filter: blur(30px);
+        color: $main;
+        .helpCenter {
+          padding: 0.7rem 1rem;
+          transition: all 0.2s ease-in;
+          border-radius: 8px;
+          width: 100%;
+          &:hover {
+            background-color: $secondary;
+            color: $main;
+          }
+        }
+      }
+
+      &:hover .navbar_dropdown_menu {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  &_bars {
+    display: none;
+  }
+
+  &_right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &_profile {
+    position: relative;
+    cursor: pointer;
+    padding: 0.3rem;
+    .navbar_profile_avatar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      max-width: 50px;
+      max-height: 50px;
+      overflow: hidden;
+    }
+    .navbar_profile_el {
+      display: none;
+    }
+
+    &:hover .navbar_profile_el {
+      display: block;
+    }
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 340px;
+  height: 100vh;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  background-color: $main;
+  box-shadow: 0 0 1rem lightgray;
+  z-index: 50;
+  display: none;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 1400px) {
+  .navbar {
+    padding: 3rem 2rem;
+  }
+}
+@media (max-width: 800px) {
+  .navbar {
+    padding: 3rem 1.1rem;
+  }
+  .navbar_middle,
+  .navbar_right {
+    display: none;
+  }
+  .navbar_bars {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    display: block;
+  }
+}
+
+@media screen and (max-device-width: 600px) {
+  .sidebar {
+    overflow-y: scroll;
+  }
+}

@@ -1,0 +1,83 @@
+.subscription {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1.1rem;
+  &_info {
+    text-align: center;
+    h1 {
+      font-size: 2.3rem;
+      margin: 1.5rem 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+  }
+
+  &_options {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    margin-top: 5rem;
+
+    .subscription_item {
+      padding: 1.4rem 2rem;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      border-radius: 15px;
+      box-shadow: 5px 5px 1rem lightgray;
+
+      strong {
+        font-size: 1.2rem;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+      }
+
+      &_service {
+        display: flex;
+        gap: 1rem;
+
+        span {
+          font-size: 18px;
+        }
+      }
+
+      &_btn {
+        margin-top: 1rem;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .subscription {
+    &_options {
+      flex-direction: column;
+
+      .subscription_item {
+        strong {
+          font-size: 1.1rem;
+        }
+
+        h3 {
+          font-size: 1.3rem;
+          margin: 1rem 0;
+        }
+
+        &_service {
+          span {
+            font-size: 17px;
+          }
+        }
+      }
+    }
+  }
+}

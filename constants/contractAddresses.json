@@ -1,0 +1,14 @@
+{
+  "31337": {
+    "marketplace": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "auction": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "nftFactory": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
+    "weth": "0x5FC8d32690cc91D4c39d9d3abcBD16989F875707"
+  },
+  "11155111": {
+    "marketplace": "0xA10094B17a050e8c372d71c607a6e9e3fCdc0979",
+    "auction": "0x40f13B13A6edAc5D469cA93f249A893364E9Ea21",
+    "nftFactory": "0x1E71213040AE4Cea4e90971186e1A28db8B90023",
+    "weth": "0x98e564ea92e64264b0bcD413f0bA54D6Ce285ae1"
+  }
+}

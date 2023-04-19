@@ -1,0 +1,79 @@
+@import "colors";
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 1.3rem;
+  }
+
+  &_options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .auth_options_item {
+      border-radius: 15px;
+      align-items: center;
+      display: flex;
+      gap: 14px;
+      padding: 0.6rem;
+      cursor: pointer;
+      box-shadow: 5px 5px 1rem lightgray;
+      span {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .auth_or {
+    // text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+
+    p {
+      margin: 0;
+    }
+    &::after {
+      content: "";
+      width: 45%;
+      border: 1px solid lightgray;
+      right: 0;
+      top: 0.8rem;
+      position: absolute;
+    }
+
+    &::before {
+      content: "";
+      width: 45%;
+      border: 1px solid lightgray;
+      left: 0;
+      top: 0.8rem;
+      position: absolute;
+    }
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_newUser {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}

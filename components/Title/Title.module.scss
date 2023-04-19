@@ -1,0 +1,38 @@
+.title {
+  width: 100%;
+  &_box {
+    margin: 0 auto;
+
+    h2 {
+      font-size: 2.7rem;
+      white-space: nowrap;
+      width: 100%;
+      line-height: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title_box {
+    h2 {
+      font-size: 2.3rem;
+      line-height: 0;
+    }
+
+    p {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .title_box {
+    h2 {
+      font-size: 1.54rem;
+      line-height: 0;
+    }
+    p {
+      font-size: 14.2px;
+    }
+  }
+}

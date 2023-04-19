@@ -1,0 +1,47 @@
+@import "../../styles/colors";
+
+.featuredNfts {
+  background-color: $secondary-bg-color;
+  padding: 3rem 0;
+
+  &_box {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    .featuredNfts_box_title {
+      padding: 0 1rem;
+    }
+    .featuredNfts_nfts {
+      margin-top: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 2rem;
+      align-self: center;
+      width: 100%;
+      margin-bottom: 3rem;
+      padding: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .featuredNfts {
+    &_box {
+      .featuredNfts_nfts {
+        grid-template-columns: repeat(auto-fit, minmax(360px, 450px));
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .featuredNfts {
+    &_box {
+      .featuredNfts_nfts {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

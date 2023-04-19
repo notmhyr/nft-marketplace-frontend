@@ -1,0 +1,59 @@
+@import "../../styles/colors";
+
+.followerTab {
+  padding-bottom: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  margin-top: 8.2rem;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  &_tabs {
+    justify-self: center;
+    align-self: center;
+    padding: 1rem 1.3rem;
+    display: flex;
+    gap: 1.5rem;
+    border-radius: 50px;
+    background-color: $secondary-bg-color;
+    margin-bottom: 2rem;
+  }
+
+  &_users {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    padding: 1rem;
+    gap: 2rem;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  &_btn {
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .followerTab {
+    &_users {
+      justify-content: center;
+    }
+
+    button {
+      font-size: 14.9px;
+    }
+  }
+}

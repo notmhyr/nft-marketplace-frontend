@@ -1,0 +1,161 @@
+@import "../../../styles/colors";
+
+.sidebar {
+  position: relative;
+  padding: 1.3rem;
+  padding-top: 2rem;
+  &_closeBtn {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  &_box {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $border-gray;
+    padding-bottom: 0.6rem;
+    p {
+      font-size: 1rem;
+    }
+
+    .sidebar_socials {
+      display: flex;
+      gap: 1.3rem;
+      font-size: 1.3rem;
+      align-items: center;
+    }
+    a {
+      padding: 0.2rem;
+      transition: all 0.3s ease-in;
+      cursor: pointer;
+      border-radius: 50%;
+      display: grid;
+    }
+
+    a:hover {
+      background-color: $secondary;
+      color: $main;
+    }
+  }
+
+  &_menu {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid $border-gray;
+    padding-bottom: 0.6rem;
+    margin-bottom: 0.7rem;
+    a {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 15px;
+    }
+
+    .sidebar_profile {
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 15px;
+
+      .sidebar_profileTitle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        .sidebar_profileTitle_left {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          &_avatar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            max-width: 45px;
+            max-height: 45px;
+            overflow: hidden;
+          }
+
+          p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          small {
+            font-size: 13px;
+            letter-spacing: 0.5px;
+          }
+        }
+      }
+
+      .sidebar_profile_menu {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+        cursor: pointer;
+        margin-top: 0.8rem;
+
+        .profile_menu_item {
+          border-radius: 10px;
+          padding: 0.6rem 0.3rem;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          transition: all 0.2s ease-in;
+
+          p {
+            margin: 0;
+          }
+
+          &:hover {
+            background-color: $secondary;
+            color: $main;
+          }
+        }
+      }
+    }
+    .sidebar_menu_help {
+      padding-top: 0.8rem;
+      padding-bottom: 0.8rem;
+      font-size: 15px;
+      width: 100%;
+
+      .sidebar_menu_helpTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .sidebar_menu_help_dropDown {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0.8rem;
+        padding-left: 1rem;
+
+        .helpCenter {
+          padding: 0.6rem 0.3rem;
+          border-radius: 10px;
+
+          &:hover {
+            background-color: $secondary;
+            color: $main;
+          }
+        }
+      }
+    }
+  }
+
+  &_button {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
