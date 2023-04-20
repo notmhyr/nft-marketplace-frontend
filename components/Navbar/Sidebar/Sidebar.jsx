@@ -128,7 +128,7 @@ const Sidebar = ({ setSidebar }) => {
                 <div className={style.profile_menu_item}>
                   <FaRegImage />
                   <p>
-                    <Link href={"/mynfts"}>My NFTs</Link>
+                    <Link href={"/user/mynfts"}>My NFTs</Link>
                   </p>
                 </div>
 

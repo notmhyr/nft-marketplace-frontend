@@ -61,7 +61,7 @@
       padding-top: 0.8rem;
       border-top-right-radius: 15px;
       background-color: $main;
-      z-index: 100;
+      // z-index: 100;
       text-align: center;
       width: 60%;
       white-space: nowrap;
@@ -78,7 +78,7 @@
       position: absolute;
       bottom: 3px;
       right: -24px;
-      z-index: 100;
+      // z-index: 100;
       width: 57%;
       transform: skewX(45deg);
       background-color: $secondary;
